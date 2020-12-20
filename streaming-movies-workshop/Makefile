@@ -41,7 +41,7 @@ destroy-local-k3d-cluster:
 create-local-minikube-cluster:
 	@$(call print-header,"Creating new minicube cluster")
 	@$(call print-prompt)
-	minikube start --cpus 4 --memory 6096
+	minikube start --cpus 2 --memory 4096
 
 destroy-local-minikube-cluster:
 	@$(call print-header,"Deleting minikube cluster...")

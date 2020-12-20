@@ -4,10 +4,10 @@ metadata:
   name: livestreams-workshop
 build:
   artifacts:
-    - image: docker.io/gamussa/movies-generator
+    - image: docker.io/sanek555/movies-generator
       custom:
         buildCommand: ./gradlew :movies-generator:bootBuildImage --imageName $IMAGE && docker push $IMAGE
-    - image: docker.io/gamussa/ratings-processor
+    - image: docker.io/sanek555/ratings-processor
       custom:
         buildCommand: ./gradlew :ratings-processor:bootBuildImage --imageName $IMAGE && docker push $IMAGE
 deploy:

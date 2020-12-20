@@ -885,6 +885,7 @@ function ccloud::create_ccloud_stack() {
   CLUSTER_CLOUD="${CLUSTER_CLOUD:-aws}"
   CLUSTER_REGION="${CLUSTER_REGION:-us-west-2}"
   CLUSTER=$(ccloud::maybe_create_and_use_cluster "$CLUSTER_NAME" $CLUSTER_CLOUD $CLUSTER_REGION)
+  echo "SAMAL: CLUSTER_NAME=$CLUSTER_NAME CLUSTER_CLOUD=$CLUSTER_CLOUD CLUSTER_REGION=$CLUSTER_REGION CLUSTER=$CLUSTER"
   if [[ "$CLUSTER" == "" ]] ; then
     echo "Kafka cluster id is empty"
     echo "ERROR: Could not create cluster. Please troubleshoot"
